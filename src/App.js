@@ -12,11 +12,14 @@ class App extends React.Component {
         this.handleChange = this.handleChange.bind(this)
     }
     handleChange(id) {
-        console.log("Changed", id)
         this.setState(prevState => {
             const updatedTodos = prevState.todos.map(todo => {
                 if(todo.id === id) {
-                    todo.completed = !todo.completed
+                    return {
+                        ...todo,
+                        completed: !todo.completed
+                        #takes all todos and updates only clicked one, not the prevState
+                    } 
                 }
                 return todo
             })
