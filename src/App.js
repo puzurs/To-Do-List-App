@@ -18,7 +18,7 @@ class App extends React.Component {
                     return {
                         ...todo,
                         completed: !todo.completed
-                        #takes all todos and updates only clicked one, not the prevState
+                        //takes all todos and updates only clicked one, not the prevState
                     } 
                 }
                 return todo
